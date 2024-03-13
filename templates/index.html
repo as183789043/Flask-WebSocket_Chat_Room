@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/main.css') }}">
+</head>
+<body>
+    <div id="landing">
+        <input type="text" id="username" placeholder="Username">
+        <button id="join-btn">JOIN</button>
+    </div>
+    
+    <div id="chat" style="display:none;">
+
+        <ul id="chat-messages">
+        </ul>
+        <input type="text" id="message" placeholder="Enter a Message">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/main.js') }}"></script>
+</body>
+</html>
