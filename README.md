@@ -10,9 +10,8 @@ pip install -r  requirements.txt
 python app.py
 ```
 
-URL
-```
 Connect URL
+```
 localhost:5000
 ```
 
