@@ -33,6 +33,15 @@ socket.on("chat", function(data) {
     ul.scrolltop = ul.scrollHeight;})
 
 
+socket.on("system_message", function(data) {
+    let ul = document.getElementById("chat-messages");
+    let li = document.createElement("li");
+    li.classList.add('center')
+    li.appendChild(document.createTextNode(data["username"] + ": " + data["message"]));
+    ul.appendChild(li);
+    ul.scrolltop = ul.scrollHeight;})
+
+
 // 斷開與伺服器的連線 特定名稱=>(disconnect )
 socket.on("disconnect", function(){
     console.log(username)

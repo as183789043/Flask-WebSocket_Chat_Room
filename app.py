@@ -18,7 +18,7 @@ def handle_connect():
 
 @socketio.on('user_join')
 def handle_new_message(username):
-    emit("chat", {"message": f'User {username} Join Chat Room', "username": "System"}, broadcast=True)
+    emit("system_message", {"message": f'User {username} Join Chat Room', "username": "System"}, broadcast=True)
     users[username] = request.sid
 
 @socketio.on('new_message')
@@ -36,8 +36,8 @@ def handle_exit():
     for user in users:
         if users[user] == request.sid:
             username = user 
-    emit("chat", {"message": f'User {username} exit Chat Room' , "username": 'System'}, broadcast=True)
+    emit("system_message", {"message": f'User {username} exit Chat Room' , "username": 'System'}, broadcast=True)
 
 
 if __name__=="__main__":
-    socketio.run(app,host='127.0.0.1')
+    socketio.run(app,host='127.0.0.1',debug=True)
