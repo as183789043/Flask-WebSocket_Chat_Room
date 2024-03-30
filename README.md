@@ -1,7 +1,7 @@
 ![image](https://github.com/as183789043/Flask-WebSocket_Chat_Room/assets/56618553/31da2b80-7675-43e4-aac5-f7b8429b51b8)
 
 
-## Qucick Start
+## Quick Start
 
 ```
 git clone https://github.com/as183789043/Flask-WebSocket_Chat_Room.git
